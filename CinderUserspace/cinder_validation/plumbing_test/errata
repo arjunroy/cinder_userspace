@@ -1,0 +1,4 @@
+1. Expose reserve needs to check that target does not already have access to reserve
+2. Expose reserve needs to check that pid is not current pid
+3. Need to expose tap name
+

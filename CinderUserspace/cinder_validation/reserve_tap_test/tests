@@ -1,0 +1,83 @@
+Validation Tests
+
+Schedule:
+
+1/6/2011 (Thursday):
+
+Test 1: Test resource consumption rate control
+
+Parent process creates reserve A.
+Parent creates tap to A from root, based on command line parameter.
+
+If caller wanted fork:
+Parent removes root from child list and adds A to child list.
+Process forks.
+Parent calls wait on child.
+Child comes into being, verifies only A is in it's accessable list, and then
+calls our test method. After that, it calls exit.
+
+If caller wanted thread:
+Process creates thread and waits on thread completion.
+Thread sets A as active reserve.
+Thread calls our test method, then calls exit.
+
+Test method: two varieties
+
+Time to get to a fixed #:
+Get and print current time. Loop an unsigned long to a fixed value. Get and print
+final time and elapsed time. With different tap flow rates, time needed to iterate
+to fixed value will increase the more we starve. The more we feed, the time decreases
+until we reach the replacement threshold (ie. ~ the rate of consumption) at which
+point the time won't decrease any further.
+
+# reached in a fixed time:
+Get and print current time. Iterate a fixed number and poll time. As soon as fixed
+time is passed, break. Results won't be 100% accurate but will be enough for verifying.
+As we starve, the # reached is smaller. As we feed, the # reached is increased up
+till a certain threshold at which point it should stay constant.
+
+
+1/7/2011 (Friday):
+
+Test 2: Subdivision
+
+Command line parameters:
+- constant rate from root reserve to D reserve
+- % for A, B and C to get resources from D.
+- time for experiment to run in seconds.
+
+Parent creates reserve D, feeding from root with given constant parameter.
+Parent creates reserves A, B and C feeding from reserve D, feeding with the appropriate proportional rates.
+Parent creates threads At, Bt and Ct.
+Each thread is passed the value of the reserve it will use, and sets that to active.
+Each thread calls into the test method.
+
+Test method:
+Each thread has a boolean called keep_running which is set to true.
+Parent thread polls clock till experiment is done.
+When experiment is done, parent sets keep_running to false.
+The loop itself increments an unsigned long for each thread.
+Each child thread breaks out of loop, prints out the value it has reached so far
+and exits.
+Since we are only giving enough juice for one thread to run at full tilt and since it
+is spread over three threads, we expect the threads to reach values that are proportional
+to the % values we specified.
+
+1/8/2011 (Saturday):
+
+Test 3: Isolation
+
+Command line parameters: Maximum amount of battery life that app can consume
+Process creates reserve with amount transferred in from root reserve.
+Process sets reserve as only reserve in child list.
+Process creates child that runs child wlan blasting code.
+
+
+Child blasts UDP packets using WLAN.
+Receiver on other system receives using WLAN and prints out what it is receiving.
+Parent prints out stats related to reserves.
+When reserve runs out, parent checks battery life remaining and prints out error.
+
+1/9 (Sunday):
+
+TBD
