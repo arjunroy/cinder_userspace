@@ -1,0 +1,3 @@
+flash_image: flashes boot image onto phone. See main README.
+google_apps_backup: Backup google apps to sdcard
+google_apps_restore: Restore google apps from sdcard

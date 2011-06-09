@@ -1,0 +1,3 @@
+agcc: Wrapper around gcc. Cross compiles C applications for ADB1 phone.
+g1make: Wrapper around make. Cross compiles Linux kernel for ADB1 phone.
+(repack/unpack)-bootimg.pl : Scripts for unpacking and repacking boot image for ADB1 phone.
