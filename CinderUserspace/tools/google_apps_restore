@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Apps
+cat /sdcard/backup/app/BugReport.apk > /system/app/BugReport.apk
+cat /sdcard/backup/app/GoogleCheckin.apk > /system/app/GoogleCheckin.apk
+cat /sdcard/backup/app/Maps.apk > /system/app/Maps.apk
+cat /sdcard/backup/app/Gmail.apk > /system/app/Gmail.apk
+cat /sdcard/backup/app/GmailProvider.apk > /system/app/GmailProvider.apk
+cat /sdcard/backup/app/GoogleApps.apk > /system/app/GoogleApps.apk
+cat /sdcard/backup/app/GoogleContactsProvider.apk > /system/app/GoogleContactsProvider.apk
+cat /sdcard/backup/app/GooglePartnerSetup.apk > /system/app/GooglePartnerSetup.apk
+cat /sdcard/backup/app/GoogleSettingsProvider.apk > /system/app/GoogleSettingsProvider.apk
+cat /sdcard/backup/app/GoogleSubscribedFeedsProvider.apk > /system/app/GoogleSubscribedFeedsProvider.apk
+cat /sdcard/backup/app/gtalkservice.apk > /system/app/gtalkservice.apk
+cat /sdcard/backup/app/ImProvider.apk > /system/app/ImProvider.apk
+cat /sdcard/backup/app/MediaUploader.apk > /system/app/MediaUploader.apk
+cat /sdcard/backup/app/NetworkLocation.apk > /system/app/NetworkLocation.apk
+cat /sdcard/backup/app/SetupWizard.apk > /system/app/SetupWizard.apk
+cat /sdcard/backup/app/Street.apk > /system/app/Street.apk
+cat /sdcard/backup/app/Talk.apk > /system/app/Talk.apk
+cat /sdcard/backup/app/Vending.apk > /system/app/Vending.apk
+cat /sdcard/backup/app/VoiceDialer.apk > /system/app/VoiceDialer.apk
+cat /sdcard/backup/app/VoiceSearch.apk > /system/app/VoiceSearch.apk
+cat /sdcard/backup/app/YouTube.apk > /system/app/YouTube.apk
+
+# Framework
+cat /sdcard/backup/framework/com.google.android.gtalkservice.jar > /system/framework/com.google.android.gtalkservice.jar
+cat /sdcard/backup/framework/com.google.android.maps.jar > /system/framework/com.google.android.maps.jar
+
+
+# Permissions
+cat /sdcard/backup/etc/permissions/com.google.android.gtalkservice.xml > /system/etc/permissions/com.google.android.gtalkservice.xml
+cat /sdcard/backup/etc/permissions/com.google.android.maps.xml > /system/etc/permissions/com.google.android.maps.xml

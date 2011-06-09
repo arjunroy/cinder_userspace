@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Apps
+cat /system/app/BugReport.apk > /sdcard/backup/app/BugReport.apk
+cat /system/app/GoogleCheckin.apk > /sdcard/backup/app/GoogleCheckin.apk
+cat /system/app/Gmail.apk > /sdcard/backup/app/Gmail.apk
+cat /system/app/GmailProvider.apk > /sdcard/backup/app/GmailProvider.apk
+cat /system/app/GoogleApps.apk > /sdcard/backup/app/GoogleApps.apk
+cat /system/app/GoogleContactsProvider.apk > /sdcard/backup/app/GoogleContactsProvider.apk
+cat /system/app/GooglePartnerSetup.apk > /sdcard/backup/app/GooglePartnerSetup.apk
+cat /system/app/GoogleSettingsProvider.apk > /sdcard/backup/app/GoogleSettingsProvider.apk
+cat /system/app/GoogleSubscribedFeedsProvider.apk > /sdcard/backup/app/GoogleSubscribedFeedsProvider.apk
+cat /system/app/gtalkservice.apk > /sdcard/backup/app/gtalkservice.apk
+cat /system/app/ImProvider.apk > /sdcard/backup/app/ImProvider.apk
+cat /system/app/MediaUploader.apk > /sdcard/backup/app/MediaUploader.apk
+cat /system/app/NetworkLocation.apk > /sdcard/backup/app/NetworkLocation.apk
+cat /system/app/SetupWizard.apk > /sdcard/backup/app/SetupWizard.apk
+cat /system/app/Street.apk > /sdcard/backup/app/Street.apk
+cat /system/app/Talk.apk > /sdcard/backup/app/Talk.apk
+cat /system/app/Vending.apk > /sdcard/backup/app/Vending.apk
+cat /system/app/VoiceDialer.apk > /sdcard/backup/app/VoiceDialer.apk
+cat /system/app/VoiceSearch.apk > /sdcard/backup/app/VoiceSearch.apk
+cat /system/app/YouTube.apk > /sdcard/backup/app/YouTube.apk
+cat /system/app/MarketUpdater.apk > /sdcard/backup/app/MarketUpdater.apk
+cat /system/app/TelephonyProvider.apk > /sdcard/backup/app/TelephonyProvider.apk
+cat /system/app/Phone.apk > /sdcard/backup/app/Phone.apk
+cat /system/app/PackageInstaller.apk > /sdcard/backup/app/PackageInstaller.apk
+cat /system/app/Maps.apk > /sdcard/backup/app/Maps.apk
+
+# Framework
+cat /system/framework/com.google.android.gtalkservice.jar > /sdcard/backup/framework/com.google.android.gtalkservice.jar
+cat /system/framework/com.google.android.maps.jar > /sdcard/backup/framework/com.google.android.maps.jar
+
+
+# Permissions
+cat /system/etc/permissions/com.google.android.gtalkservice.xml > /sdcard/backup/etc/permissions/com.google.android.gtalkservice.xml
+cat /system/etc/permissions/com.google.android.maps.xml > /sdcard/backup/etc/permissions/com.google.android.maps.xml
